@@ -1,0 +1,66 @@
+@media (max-width: 800px) and (orientation: portrait) {
+    body {
+        #logo {
+            width: 92%;
+            #title {
+                font-size: 12vw;
+            }
+        }
+
+        #gradient-bg {
+            height: auto;
+            aspect-ratio: 4 / 3;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        #scroll-indicator {
+            transform: translateY(13%) translateX(-50%);
+            width: 17vw;
+        }
+
+        main {
+            max-width: 100%;
+            padding: 1em 1.5em;
+            font-size: 1.25em;
+
+            #team-wrapper {
+                display: block;
+            }
+        }
+
+        #navbar {
+            #nav-logo {
+                width: 5em;
+            }
+        }
+    }
+}
+
+@media (max-height: 800px) and (orientation: landscape) {
+    body {
+        #logo {
+            width: auto;
+            height: 55%;
+            #title {
+                font-size: 12.5vh;
+            }
+        }
+        #scroll-indicator {
+            width: 16vh;
+            transform: translateY(30%) translateX(-50%);
+        }
+
+        main {
+            max-width: 100%;
+            padding: 1em 3em;
+            font-size: 1.3em;
+        }
+
+        #navbar {
+            #nav-logo {
+                width: 6em;
+            }
+        }
+    }
+}

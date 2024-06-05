@@ -1,0 +1,63 @@
+.bio {
+    flex: 1 1 0;
+
+    color: white;
+    font-size: 2em;
+    font-family: "basic-sans", sans-serif;
+    font-weight: 100;
+
+    max-width: 500px;
+
+    .bio-image {
+        width: 85%;
+        display: block;
+        margin: 0 auto .5em auto;
+
+        transition: transform .5s;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    a {
+        color: hotpink;
+        &:hover {
+            color: white;
+        }
+    }
+
+    .bio-name {
+        font-weight: 400;
+        font-size: .7em;
+        text-align: center;
+        font-family: 'printF', monospace;
+    }
+
+    .bio-pronouns {
+        font-size: .5em;
+        text-align: center;
+        opacity: .6;
+        line-height: 1em;
+    }
+
+    .bio-description {
+        font-size: .45em;
+        font-weight: 300;
+        font-style: italic;
+        margin-top: 1em;
+        line-height: 1.3em;
+        padding: 0 1em;
+    }
+}
+
+@media (max-width: 800px) and (orientation: portrait) {
+    .bio {
+        &:first-child {
+            margin-bottom: 1.5em;
+        }
+
+        .bio-description {
+            padding: 0;
+        }
+    }
+}

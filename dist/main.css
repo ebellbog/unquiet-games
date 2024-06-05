@@ -1,0 +1,311 @@
+body {
+  margin: 0 0 3em 0;
+  padding: 0;
+  background-color: #111;
+  color: white;
+}
+body.animated-transitions #logo {
+  transition: opacity 1.5s, transform 1.5s;
+}
+body.animated-transitions #logo #logo-joystick {
+  transition-delay: 1s;
+}
+body.animated-transitions #logo #logo-path {
+  transition-delay: 1.1s;
+}
+body.animated-transitions #logo #logo-d-pad {
+  transition-delay: 3.1s;
+}
+body.animated-transitions #logo #title {
+  transition-delay: 4s;
+}
+body.animated-transitions #scroll-indicator {
+  transition-delay: 5.3s;
+}
+body.animated-transitions .fade-in {
+  transition: all 1.5s;
+}
+body.animated-transitions .clip-in {
+  transition: all 4s;
+}
+body.show-logo #logo {
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+body.show-logo .fade-in {
+  opacity: 1;
+}
+body.show-logo .fade-in#title {
+  transform: none;
+}
+body.show-logo .clip-in {
+  clip-path: inset(0 0 0 0);
+}
+body .fade-in {
+  opacity: 0;
+}
+body .clip-in {
+  clip-path: inset(0 100% 0 0);
+}
+body #navbar {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  padding: 0.75em;
+}
+body #navbar #nav-logo {
+  cursor: pointer;
+  width: 8em;
+}
+body #gradient-bg {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: radial-gradient(#2e2e2e, #111 70%);
+  z-index: -2;
+}
+body #logo {
+  z-index: -1;
+  position: fixed;
+  top: 42%;
+  left: 50%;
+  width: 700px;
+  aspect-ratio: 7 / 4;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.7);
+}
+body #logo img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: contain;
+}
+body #logo #shadow {
+  position: absolute;
+  width: 100%;
+  height: 22%;
+  background: radial-gradient(rgba(0, 0, 0, 0.3), transparent 70%);
+  bottom: -8%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+body #title {
+  color: white;
+  font-family: "ff-providence-sans-web-pro", sans-serif;
+  font-weight: 400;
+  font-size: 6em;
+  text-wrap: nowrap;
+  text-shadow: 3px 4px black;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  transform: scale(0.8);
+}
+body #scroll-indicator {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6em;
+  animation: bounce 0.6s linear infinite alternate-reverse;
+  cursor: pointer;
+}
+body #scroll-indicator path {
+  fill: #ccc;
+}
+@keyframes bounce {
+  from {
+    bottom: 0;
+  }
+  to {
+    bottom: 1em;
+  }
+}
+body #spacer {
+  height: 115vh;
+  background: linear-gradient(transparent 70%, #111);
+}
+body main {
+  background-color: #111;
+  padding: 1em 8em 2em 8em;
+  font-family: "basic-sans", sans-serif;
+  font-weight: 100;
+  font-size: 1.85em;
+  line-height: 1.75em;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+body main b {
+  font-weight: 400;
+  color: hotpink;
+  animation: flash 1s alternate-reverse infinite;
+}
+body main a {
+  color: hotpink;
+}
+body main a:hover {
+  color: white;
+}
+body main .studio-name {
+  font-weight: 700;
+}
+body main h1 {
+  display: inline-block;
+  margin-top: 2.5em;
+  margin-bottom: 1.75em;
+  line-height: 0.5em;
+  padding: 0.35em 0.4em 0.2em 0.15em;
+  color: black;
+  background-color: white;
+  transform: skewX(-10deg);
+  box-shadow: 0.1em 0.1em 0 hotpink;
+  font-family: "Genica", sans-serif;
+  font-size: 1.9em;
+}
+body main .page {
+  height: 100vh;
+  position: relative;
+  margin: 1em 0;
+}
+body main .page .page-content {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+body main #team-wrapper {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 2em;
+}
+body main .banner-image {
+  width: 100%;
+  border-radius: 1em;
+  box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.5);
+  margin-bottom: 1em;
+  transition: transform 0.5s;
+}
+body main .banner-image:hover {
+  transform: scale(1.06);
+}
+body main .image-link {
+  text-decoration: none;
+}
+body footer {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  font-family: 'printF', monospace;
+  opacity: 0.2;
+}
+
+.bio {
+  flex: 1 1 0;
+  color: white;
+  font-size: 2em;
+  font-family: "basic-sans", sans-serif;
+  font-weight: 100;
+  max-width: 500px;
+}
+.bio .bio-image {
+  width: 85%;
+  display: block;
+  margin: 0 auto 0.5em auto;
+  transition: transform 0.5s;
+}
+.bio .bio-image:hover {
+  transform: scale(1.1);
+}
+.bio a {
+  color: hotpink;
+}
+.bio a:hover {
+  color: white;
+}
+.bio .bio-name {
+  font-weight: 400;
+  font-size: 0.7em;
+  text-align: center;
+  font-family: 'printF', monospace;
+}
+.bio .bio-pronouns {
+  font-size: 0.5em;
+  text-align: center;
+  opacity: 0.6;
+  line-height: 1em;
+}
+.bio .bio-description {
+  font-size: 0.45em;
+  font-weight: 300;
+  font-style: italic;
+  margin-top: 1em;
+  line-height: 1.3em;
+  padding: 0 1em;
+}
+@media (max-width: 800px) and (orientation: portrait) {
+  .bio:first-child {
+    margin-bottom: 1.5em;
+  }
+  .bio .bio-description {
+    padding: 0;
+  }
+}
+
+@media (max-width: 800px) and (orientation: portrait) {
+  body #logo {
+    width: 92%;
+  }
+  body #logo #title {
+    font-size: 12vw;
+  }
+  body #gradient-bg {
+    height: auto;
+    aspect-ratio: 4 / 3;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  body #scroll-indicator {
+    transform: translateY(13%) translateX(-50%);
+    width: 17vw;
+  }
+  body main {
+    max-width: 100%;
+    padding: 1em 1.5em;
+    font-size: 1.25em;
+  }
+  body main #team-wrapper {
+    display: block;
+  }
+  body #navbar #nav-logo {
+    width: 5em;
+  }
+}
+@media (max-height: 800px) and (orientation: landscape) {
+  body #logo {
+    width: auto;
+    height: 55%;
+  }
+  body #logo #title {
+    font-size: 12.5vh;
+  }
+  body #scroll-indicator {
+    width: 16vh;
+    transform: translateY(30%) translateX(-50%);
+  }
+  body main {
+    max-width: 100%;
+    padding: 1em 3em;
+    font-size: 1.3em;
+  }
+  body #navbar #nav-logo {
+    width: 6em;
+  }
+}
+
