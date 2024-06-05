@@ -1,3 +1,6 @@
+
+@darkGray: #111;
+
 @media (max-width: 800px) and (orientation: portrait) {
     body {
         #logo {
@@ -17,6 +20,15 @@
         #scroll-indicator {
             transform: translateY(13%) translateX(-50%);
             width: 17vw;
+            animation-name: mobile-bounce;
+        }
+        @keyframes mobile-bounce {
+            from {
+                bottom: 2em;
+            }
+            to {
+                bottom: 3.5em;
+            }
         }
 
         main {
@@ -31,8 +43,24 @@
 
         #navbar {
             #nav-logo {
+                // display: none;
                 width: 5em;
             }
+        }
+
+        #social-links {
+            top: auto;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            line-height: 2.5em;
+            display: block;
+            text-align: center;
+            background-color: fade(@darkGray, 90%);
+        }
+
+        footer {
+            font-size: .75em;
         }
     }
 }
@@ -61,6 +89,22 @@
             #nav-logo {
                 width: 6em;
             }
+        }
+
+        #social-links {
+            top: auto;
+            bottom: .2em;
+            display: inline-block;
+            line-height: 1.75em;
+            background-color: fade(@darkGray, 90%);
+            border-radius: 2em;
+            padding-left: .2em;
+            padding-right: .2em;
+            font-size: .9em;
+        }
+
+        footer {
+            font-size: .85em;
         }
     }
 }

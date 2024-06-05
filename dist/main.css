@@ -59,6 +59,24 @@ body #navbar {
 body #navbar #nav-logo {
   cursor: pointer;
   width: 8em;
+  filter: drop-shadow(1px 1px 5px #111);
+}
+body #social-links {
+  z-index: 3;
+  position: fixed;
+  right: 10px;
+  top: 10px;
+}
+body #social-links a {
+  color: hotpink;
+  padding: 0 0.5em;
+  font-size: 1.3em;
+  font-family: "basic-sans", sans-serif;
+  font-weight: 100;
+  cursor: pointer;
+}
+body #social-links a:hover {
+  color: white;
 }
 body #gradient-bg {
   position: fixed;
@@ -199,11 +217,13 @@ body main .image-link {
   text-decoration: none;
 }
 body footer {
+  position: relative;
   text-align: center;
   margin: 0;
-  padding: 0;
+  padding-bottom: 1em;
   font-family: 'printF', monospace;
-  opacity: 0.2;
+  background-color: #111;
+  color: rgba(255, 255, 255, 0.2);
 }
 
 .bio {
@@ -249,6 +269,9 @@ body footer {
   line-height: 1.3em;
   padding: 0 1em;
 }
+.bio .bio-description i {
+  font-style: normal;
+}
 @media (max-width: 800px) and (orientation: portrait) {
   .bio:first-child {
     margin-bottom: 1.5em;
@@ -274,6 +297,15 @@ body footer {
   body #scroll-indicator {
     transform: translateY(13%) translateX(-50%);
     width: 17vw;
+    animation-name: mobile-bounce;
+  }
+  @keyframes mobile-bounce {
+    from {
+      bottom: 2em;
+    }
+    to {
+      bottom: 3.5em;
+    }
   }
   body main {
     max-width: 100%;
@@ -285,6 +317,19 @@ body footer {
   }
   body #navbar #nav-logo {
     width: 5em;
+  }
+  body #social-links {
+    top: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    line-height: 2.5em;
+    display: block;
+    text-align: center;
+    background-color: rgba(17, 17, 17, 0.9);
+  }
+  body footer {
+    font-size: 0.75em;
   }
 }
 @media (max-height: 800px) and (orientation: landscape) {
@@ -306,6 +351,20 @@ body footer {
   }
   body #navbar #nav-logo {
     width: 6em;
+  }
+  body #social-links {
+    top: auto;
+    bottom: 0.2em;
+    display: inline-block;
+    line-height: 1.75em;
+    background-color: rgba(17, 17, 17, 0.9);
+    border-radius: 2em;
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+    font-size: 0.9em;
+  }
+  body footer {
+    font-size: 0.85em;
   }
 }
 

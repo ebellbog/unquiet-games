@@ -48,14 +48,15 @@ $(document).ready(() => {
         name: 'Elana Bell Bogdan',
         pronouns: 'she/her',
         personalUrl: 'https://elana.games',
-        description: `Elana is a freelance UI engineer & game designer, with an interest in social impact, accessibility, and queer narratives. Her career path began in the tech industry, where she worked in web development for nearly a decade. However, her creative passion has always taken her back to games - from spending summers in high school developing puzzle games for a local corn maze, to interning for a mobile games studio during her college years, to consulting for a women-owned escape room, to debuting one of her latest games at a barcade in Brooklyn.`
+        description: `Elana is a queer game designer and UI engineer with a passion for crafting accessible, immersive experiences to help make the world a better place. After nearly a decade in the tech industry, she now works as a Technical Designer at Bolero Game Studio. Along the way, she has also consulted for a women-owned escape room; volunteered with Games For Change; built an immersive multimedia archive to collect & preserve player stories from the <i>Myst</i> franchise; and exhibited games at Wonderville, Waffle Games, and Playcrafting NYC.`
+        //`Elana is a UI engineer & game designer, with a focus on social impact, accessibility, and queer narratives. Her career path began in the tech industry, where she worked in web development for nearly a decade. However, her creative passion has always taken her back to games - from interning for Scopely during her college years, to , to developing an arcade game for Wonderville in Queens, NY. She now works as a Technical Designer at Bolero Game Studio and Unquiet Games.`
     };
     const natData = {
         imgSrc: 'uqg_nat.png',
         name: 'Nat Mesnard',
         pronouns: 'they/them',
         personalUrl: 'https://natmesnard.com',
-        description: `Nat Mesnard writes fiction, teaches storytelling, and designs games. They are faculty at Pratt Institute and School of Visual Arts, and co-founded Scryptid Games. Nat has published poetry, fiction, and nonfiction in Vol. 1 Brooklyn, Cartridge Lit, Autostraddle, Bodega, Blackbird, Kenyon Review Online, The Gettysburg Review, Ninth Letter, The Journal, Green Mountains Review and elsewhere. New games include a tabletop RPG, Ball of the Wild, funded on Kickstarter, and a short RPG titled Adventurer’s Respite forthcoming in the 2023 Level 1 Anthology.`
+        description: `Nat writes fiction, teaches storytelling, and designs games. They are faculty at Pratt Institute and School of Visual Arts, and co-founded Scryptid Games. Nat has published poetry, fiction, and nonfiction in Vol. 1 Brooklyn, Cartridge Lit, Autostraddle, Bodega, Blackbird, Kenyon Review Online, The Gettysburg Review, Ninth Letter, The Journal, Green Mountains Review and elsewhere. New games include a tabletop RPG, Ball of the Wild, funded on Kickstarter, and a short RPG titled Adventurer’s Respite forthcoming in the 2023 Level 1 Anthology.`
     };
 
     $('#team-wrapper').html(BioTemplate(elanaData) + BioTemplate(natData));
