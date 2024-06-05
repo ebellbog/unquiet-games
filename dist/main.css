@@ -327,6 +327,7 @@ body footer {
     display: block;
     text-align: center;
     background-color: rgba(17, 17, 17, 0.9);
+    font-size: 0.9em;
   }
   body footer {
     font-size: 0.75em;
@@ -361,7 +362,7 @@ body footer {
     border-radius: 2em;
     padding-left: 0.2em;
     padding-right: 0.2em;
-    font-size: 0.9em;
+    font-size: 1em;
   }
   body footer {
     font-size: 0.85em;
