@@ -18,18 +18,20 @@ import CaretDown from '../img/caret_down.svg';
 
 history.scrollRestoration = "manual";
 
+let $body, $gradientBg, $logo, $navbar, $scrollIndicator;
+
 $(document).ready(() => {
-    const $body = $('body');
+    $body = $('body');
+    $gradientBg = $('#gradient-bg');
+    $logo = $('#logo');
+    $navbar = $('#navbar');
+    $scrollIndicator = $('#scroll-indicator');
 
     $body.addClass('animated-transitions');
     $(window).on('resize scroll', (e) => {
         $body.removeClass('animated-transitions');
         if (e.type === 'scroll') {
             onScroll();
-            $('#scroll-indicator').css({
-                transition: 'opacity 2s',
-                opacity: 0,
-            });
         }
     });
 
@@ -37,11 +39,16 @@ $(document).ready(() => {
         $body.animate({scrollTop: 0}, 800);
     });
 
+    $scrollIndicator.on('click', () => {
+        const offset = parseInt($('#about').offset().top - 25);
+        $body.animate({scrollTop: offset}, 1000);
+    });
+    $scrollIndicator.html(CaretDown);
+
     setTimeout(() => {
         $body.addClass('show-logo');
     }, 500);
 
-    $('#scroll-indicator').html(CaretDown);
 
     const elanaData = {
         imgSrc: 'uqg_elana.png',
@@ -62,9 +69,10 @@ $(document).ready(() => {
 });
 
 function onScroll(scrollAmount) {
-    scrollAmount = scrollAmount || $('body').scrollTop();
+    scrollAmount = scrollAmount || $body.scrollTop();
 
-    $('#gradient-bg').css('opacity', Math.max((500 - scrollAmount) / 500, 0));
-    $('#logo').css('opacity', Math.max((1500 - scrollAmount) / 500, 0));
-    $('#navbar').css('opacity', 1 - Math.max((900 - scrollAmount) / 500, 0));
+    $gradientBg.css('opacity', Math.max((500 - scrollAmount) / 500, 0));
+    $logo.css('opacity', Math.max((1500 - scrollAmount) / 500, 0));
+    $navbar.css('opacity', 1 - Math.max((900 - scrollAmount) / 500, 0));
+    $scrollIndicator.css('opacity', Math.max((100 - scrollAmount) / 100, 0));
 }
