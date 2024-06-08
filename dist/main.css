@@ -283,10 +283,10 @@ body footer {
 
 @media (max-width: 800px) and (orientation: portrait) {
   body #logo {
-    width: 92%;
+    width: 85%;
   }
   body #logo #title {
-    font-size: 12vw;
+    font-size: 11.5vw;
   }
   body #gradient-bg {
     height: auto;

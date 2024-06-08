@@ -73,6 +73,6 @@ function onScroll(scrollAmount) {
 
     $gradientBg.css('opacity', Math.max((500 - scrollAmount) / 500, 0));
     $logo.css('opacity', Math.max((1500 - scrollAmount) / 500, 0));
-    $navbar.css('opacity', 1 - Math.max((900 - scrollAmount) / 500, 0));
+    $navbar.css('opacity', 1 - Math.max(2 * (screen.height - scrollAmount) / screen.height, 0));
     $scrollIndicator.css('opacity', Math.max((100 - scrollAmount) / 100, 0));
 }
