@@ -10,7 +10,7 @@ const natData = {
     name: 'Nat Mesnard',
     pronouns: 'they/them',
     personalUrl: 'https://natmesnard.com',
-    description: `Nat writes fiction, teaches storytelling, and designs games. They are faculty at Pratt Institute and School of Visual Arts, and co-founded <a href="https://scryptidgames.com/" target="_blnak">Scryptid Games</a>. Nat has published poetry, fiction, and nonfiction in Vol. 1 Brooklyn, Cartridge Lit, Autostraddle, Bodega, Blackbird, Kenyon Review Online, The Gettysburg Review, Ninth Letter, The Journal, Green Mountains Review and elsewhere. New games include a tabletop RPG, Ball of the Wild, funded on Kickstarter, and a short RPG titled Adventurer’s Respite forthcoming in the 2023 Level 1 Anthology.`
+    description: `Nat writes fiction, teaches storytelling, and designs games. They are faculty in Pratt Institute's Game Design & Interactive Media program, and teach interactive fiction for <a href="https://one-story.com/" target="_blank">One Story</a>. Nat's poetry, fiction, and nonfiction have appeared in <i>Vol. 1 Brooklyn, Cartridge Lit, Autostraddle, Bodega, Blackbird, Kenyon Review Online,</i> and elsewhere. A co-founder of <a href="https://scryptidgames.com/" target="_blnak">Scryptid Games</a>, Nat's published roleplaying games include Business Wizards, Horseshoe Academy, Ball of the Wild, Adventurer's Respite, and Gods of Rock. New titles from Scryptid Games and 9th Level Games are forthcoming in 2025.`
 };
 
 export {elanaData, natData};
