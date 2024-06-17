@@ -35,6 +35,11 @@ body {
             transition: all 4s;
         }
     }
+    &.page-loaded {
+        #mailing-list-modal {
+            transition: opacity .5s;
+        }
+    }
     &.show-logo {
         #logo {
             transform: translate(-50%, -50%);
@@ -276,5 +281,107 @@ body {
         font-family: 'printF', monospace;
         background-color: @darkGray;
         color: fade(white, 20%);
+    }
+
+    &.show-modal #mailing-list-modal {
+        pointer-events: all;
+        opacity: 1;
+    }
+
+    #mailing-list-modal {
+        pointer-events: none;
+        opacity: 0;
+
+        z-index: 10;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        border-radius: 12px;
+        overflow: hidden;
+
+        box-shadow: 0 0 14px fade(black, 60%);
+
+        h2 {
+            display: inline-block;
+
+            line-height: .5em;
+
+            padding: .35em .4em .3em .5em;
+            color: black;
+            background-color: white;
+
+            transform: skewX(-10deg);
+            box-shadow: .1em .1em 0 hotpink;
+
+            font-family: "Genica", sans-serif;
+            font-size: 1.9em;
+        }
+
+        p {
+            font-size: 1.1em;
+        }
+
+
+        #mc_embed_signup {
+            font-family: @bodyFont;
+            font-weight: 300;
+
+            background: #fff;
+            padding: .2 1em;
+            color: black;
+            clear: left;
+            width: 600px;
+
+            .asterisk {
+                color: hotpink;
+            }
+
+            label {
+                font-weight: 400;
+            }
+
+            #mc-embedded-subscribe-form {
+                .mce_inline_error {
+                    color: hotpink;
+                    border-color: hotpink;
+                }
+
+                #mce-responses {
+                    margin: 0;
+                    padding: 0;
+
+                    #mce-success-response {
+                        padding: 0;
+                        margin: 0 0 1.5em 0;
+                        color: #1aaa84;
+                    }
+                }
+            }
+
+            .foot {
+                display: block;
+                #mc-embedded-subscribe {
+                    &:hover {
+                        background-color: hotpink;
+                        color: white;
+                    }
+                }
+                #mc-embedded-cancel {
+                    background-color: white;
+                    border: 2px solid black;
+                    line-height: 1em;
+                    color: black;
+
+                    &:hover {
+                        background-color: hotpink;
+                        color: white;
+                        border-color: hotpink;
+                    }
+                }
+            }
+
+        }
     }
 }

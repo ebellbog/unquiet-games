@@ -28,7 +28,7 @@ $(document).ready(() => {
     $navbar = $('#navbar');
     $scrollIndicator = $('#scroll-indicator');
 
-    $body.addClass('animated-transitions');
+    $body.addClass('animated-transitions page-loaded');
     $(window).on('resize scroll touchmove', (e) => {
         $body.removeClass('animated-transitions');
         if (e.type === 'scroll') {
@@ -36,8 +36,30 @@ $(document).ready(() => {
         }
     });
 
+    $body.on('click', ({target}) => {
+        if (target.tagName === 'A') return;
+
+        const $target = $(target);
+        const $modalParent = $target.closest('#mailing-list-modal');
+        if ($modalParent.length) return;
+
+        hideModal();
+    });
+
     $('#nav-logo').on('click', () => {
         $body.animate({scrollTop: 0}, 800);
+    });
+
+    $('#join-link').on('click', (e) => {
+        e.preventDefault();
+        $body.addClass('show-modal');
+    });
+    $('#mc-embedded-subscribe').on('click', () => {
+        // Clear any previous response
+        $('#mce-responses .response').html('').hide();
+    });
+    $('#mc-embedded-cancel').on('click', () => {
+        hideModal();
     });
 
     $scrollIndicator.on('click', () => {
@@ -51,6 +73,7 @@ $(document).ready(() => {
     }, 500);
 
     $('#team-wrapper').html(BioTemplate(elanaData) + BioTemplate(natData));
+    $('a').each((idx, a) => $(a).attr('target', '_blank'));
 });
 
 function onScroll(scrollAmount) {
@@ -60,4 +83,18 @@ function onScroll(scrollAmount) {
     $logo.css('opacity', Math.max((1500 - scrollAmount) / 500, 0));
     $navbar.css('opacity', 1 - Math.max(2 * (screen.height - scrollAmount) / screen.height, 0));
     $scrollIndicator.css('opacity', Math.max((100 - scrollAmount) / 100, 0));
+}
+
+function hideModal() {
+    $body.removeClass('show-modal');
+
+    setTimeout(() => {
+        // Clear input fields
+        $('.mc-field-group input').val('');
+
+        // Clear response messages
+        $('#mce-responses .response').html('').hide();
+        $('.mc-field-group div').remove();
+        $('.mce_inline_error').removeClass('mce_inline_error');
+    }, 500);
 }

@@ -28,6 +28,9 @@ body.animated-transitions .fade-in {
 body.animated-transitions .clip-in {
   transition: all 4s;
 }
+body.page-loaded #mailing-list-modal {
+  transition: opacity 0.5s;
+}
 body.show-logo #logo {
   transform: translate(-50%, -50%);
   opacity: 1;
@@ -225,6 +228,82 @@ body footer {
   background-color: #111;
   color: rgba(255, 255, 255, 0.2);
 }
+body.show-modal #mailing-list-modal {
+  pointer-events: all;
+  opacity: 1;
+}
+body #mailing-list-modal {
+  pointer-events: none;
+  opacity: 0;
+  z-index: 10;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 14px rgba(0, 0, 0, 0.6);
+}
+body #mailing-list-modal h2 {
+  display: inline-block;
+  line-height: 0.5em;
+  padding: 0.35em 0.4em 0.3em 0.5em;
+  color: black;
+  background-color: white;
+  transform: skewX(-10deg);
+  box-shadow: 0.1em 0.1em 0 hotpink;
+  font-family: "Genica", sans-serif;
+  font-size: 1.9em;
+}
+body #mailing-list-modal p {
+  font-size: 1.1em;
+}
+body #mailing-list-modal #mc_embed_signup {
+  font-family: "basic-sans", sans-serif;
+  font-weight: 300;
+  background: #fff;
+  padding: 0.2 1em;
+  color: black;
+  clear: left;
+  width: 600px;
+}
+body #mailing-list-modal #mc_embed_signup .asterisk {
+  color: hotpink;
+}
+body #mailing-list-modal #mc_embed_signup label {
+  font-weight: 400;
+}
+body #mailing-list-modal #mc_embed_signup #mc-embedded-subscribe-form .mce_inline_error {
+  color: hotpink;
+  border-color: hotpink;
+}
+body #mailing-list-modal #mc_embed_signup #mc-embedded-subscribe-form #mce-responses {
+  margin: 0;
+  padding: 0;
+}
+body #mailing-list-modal #mc_embed_signup #mc-embedded-subscribe-form #mce-responses #mce-success-response {
+  padding: 0;
+  margin: 0 0 1.5em 0;
+  color: #1aaa84;
+}
+body #mailing-list-modal #mc_embed_signup .foot {
+  display: block;
+}
+body #mailing-list-modal #mc_embed_signup .foot #mc-embedded-subscribe:hover {
+  background-color: hotpink;
+  color: white;
+}
+body #mailing-list-modal #mc_embed_signup .foot #mc-embedded-cancel {
+  background-color: white;
+  border: 2px solid black;
+  line-height: 1em;
+  color: black;
+}
+body #mailing-list-modal #mc_embed_signup .foot #mc-embedded-cancel:hover {
+  background-color: hotpink;
+  color: white;
+  border-color: hotpink;
+}
 
 .bio {
   flex: 1 1 0;
@@ -242,12 +321,6 @@ body footer {
 }
 .bio .bio-image:hover {
   transform: scale(1.1);
-}
-.bio a {
-  color: hotpink;
-}
-.bio a:hover {
-  color: white;
 }
 .bio .bio-name {
   font-weight: 400;
@@ -331,6 +404,22 @@ body footer {
   }
   body footer {
     font-size: 0.75em;
+  }
+  body #mailing-list-modal {
+    width: calc(100% - 2em);
+  }
+  body #mailing-list-modal #mc_embed_signup {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  body #mailing-list-modal #mc_embed_signup h2 {
+    font-size: 1.5em;
+    line-height: 1em;
+    padding: 0 0 0.3em 0;
+    margin-bottom: 0.5em;
+  }
+  body #mailing-list-modal #mc_embed_signup .response {
+    width: 100%;
   }
 }
 @media (max-height: 800px) and (orientation: landscape) {
