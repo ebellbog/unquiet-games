@@ -400,7 +400,7 @@ body #mailing-list-modal #mc_embed_signup .foot #mc-embedded-cancel:hover {
     display: block;
     text-align: center;
     background-color: rgba(17, 17, 17, 0.9);
-    font-size: 0.9em;
+    font-size: 0.75em;
   }
   body footer {
     font-size: 0.75em;
@@ -444,7 +444,7 @@ body #mailing-list-modal #mc_embed_signup .foot #mc-embedded-cancel:hover {
   }
   body #social-links {
     top: auto;
-    bottom: 0.2em;
+    bottom: 0.6em;
     display: inline-block;
     line-height: 1.75em;
     background-color: rgba(17, 17, 17, 0.9);
