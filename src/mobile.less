@@ -2,6 +2,10 @@
 @darkGray: #111;
 
 @media (max-width: 800px) and (orientation: portrait) {
+    html {
+        -webkit-text-size-adjust: 100%;
+    }
+
     body {
         #logo {
             width: 85%;
@@ -57,7 +61,7 @@
             display: block;
             text-align: center;
             background-color: fade(@darkGray, 90%);
-            font-size: .75em;
+            font-size: .85em;
         }
 
         footer {
@@ -87,6 +91,10 @@
 }
 
 @media (max-height: 800px) and (orientation: landscape) {
+    html {
+        -webkit-text-size-adjust: 100%;
+    }
+
     body {
         #logo {
             width: auto;
