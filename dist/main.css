@@ -354,7 +354,7 @@ body #mailing-list-modal #mc_embed_signup .foot #mc-embedded-cancel:hover {
   }
 }
 
-@media (max-device-width: 800px) and (orientation: portrait) {
+@media (max-width: 800px) and (orientation: portrait) {
   html {
     -webkit-text-size-adjust: 100%;
   }
@@ -425,7 +425,7 @@ body #mailing-list-modal #mc_embed_signup .foot #mc-embedded-cancel:hover {
     width: 100%;
   }
 }
-@media (max-device-height: 800px) and (orientation: landscape) {
+@media (max-height: 800px) and (orientation: landscape) and (min-aspect-ratio: 16 / 9) {
   html {
     -webkit-text-size-adjust: 100%;
   }
