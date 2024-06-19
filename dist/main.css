@@ -354,7 +354,7 @@ body #mailing-list-modal #mc_embed_signup .foot #mc-embedded-cancel:hover {
   }
 }
 
-@media (max-width: 800px) and (orientation: portrait) {
+@media (max-device-width: 800px) and (orientation: portrait) {
   html {
     -webkit-text-size-adjust: 100%;
   }
@@ -403,7 +403,7 @@ body #mailing-list-modal #mc_embed_signup .foot #mc-embedded-cancel:hover {
     display: block;
     text-align: center;
     background-color: rgba(17, 17, 17, 0.9);
-    font-size: 0.85em;
+    font-size: 0.88em;
   }
   body footer {
     font-size: 0.75em;
@@ -425,7 +425,7 @@ body #mailing-list-modal #mc_embed_signup .foot #mc-embedded-cancel:hover {
     width: 100%;
   }
 }
-@media (max-height: 800px) and (orientation: landscape) {
+@media (max-device-height: 800px) and (orientation: landscape) {
   html {
     -webkit-text-size-adjust: 100%;
   }

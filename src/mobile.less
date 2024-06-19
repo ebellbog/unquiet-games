@@ -1,7 +1,7 @@
 
 @darkGray: #111;
 
-@media (max-width: 800px) and (orientation: portrait) {
+@media (max-device-width: 800px) and (orientation: portrait) {
     html {
         -webkit-text-size-adjust: 100%;
     }
@@ -61,7 +61,7 @@
             display: block;
             text-align: center;
             background-color: fade(@darkGray, 90%);
-            font-size: .85em;
+            font-size: .88em;
         }
 
         footer {
@@ -90,7 +90,7 @@
     }
 }
 
-@media (max-height: 800px) and (orientation: landscape) {
+@media (max-device-height: 800px) and (orientation: landscape) {
     html {
         -webkit-text-size-adjust: 100%;
     }
