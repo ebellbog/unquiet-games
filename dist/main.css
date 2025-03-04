@@ -72,14 +72,17 @@ body #social-links {
 }
 body #social-links a {
   color: hotpink;
+  opacity: 0.8;
   padding: 0 0.5em;
   font-size: 1.3em;
   font-family: "basic-sans", sans-serif;
   font-weight: 100;
+  text-decoration: none;
   cursor: pointer;
 }
 body #social-links a:hover {
   color: white;
+  opacity: 1;
 }
 body #gradient-bg {
   position: fixed;
@@ -403,7 +406,11 @@ body #mailing-list-modal #mc_embed_signup .foot #mc-embedded-cancel:hover {
     display: block;
     text-align: center;
     background-color: rgba(17, 17, 17, 0.9);
-    font-size: 0.88em;
+    font-size: 1em;
+  }
+  body #social-links a {
+    opacity: 1;
+    padding: 0 0.6em;
   }
   body footer {
     font-size: 0.75em;
@@ -452,12 +459,15 @@ body #mailing-list-modal #mc_embed_signup .foot #mc-embedded-cancel:hover {
     top: auto;
     bottom: 0.6em;
     display: inline-block;
-    line-height: 1.75em;
-    background-color: rgba(17, 17, 17, 0.9);
+    line-height: 2.5em;
+    background-color: rgba(17, 17, 17, 0.75);
     border-radius: 2em;
     padding-left: 0.2em;
     padding-right: 0.2em;
     font-size: 1em;
+  }
+  body #social-links a {
+    opacity: 1;
   }
   body footer {
     font-size: 0.85em;
