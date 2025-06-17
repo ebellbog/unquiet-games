@@ -28,10 +28,10 @@
         }
         @keyframes mobile-bounce {
             from {
-                bottom: 2em;
+                bottom: 3.5em;
             }
             to {
-                bottom: 3.5em;
+                bottom: 5em;
             }
         }
 
@@ -52,20 +52,50 @@
             }
         }
 
-        #social-links {
+        #steam-banner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: .4em .3em;
+            border-radius: 0;
+            border: 0;
+            border-top: 2px solid hotpink;
+
+            background-color: fade(desaturate(darken(hotpink, 40%), 50%), 90%);
+
             top: auto;
+            bottom: 0;
             left: 0;
             right: 0;
-            bottom: 0;
-            line-height: 3em;
+            width: 100%;
+            height: auto;
+
+            img {
+                display: inline-block;
+                width: 40%;
+                height: auto;
+                padding: 0 .7em;
+                margin: 0;
+            }
+        }
+
+        #social-links {
             display: block;
+            top: .4em;
+            bottom: auto;
+            line-height: 3em;
+            padding: 0 .2em;
+
+            font-size: .9em;
             text-align: center;
-            background-color: fade(@darkGray, 90%);
-            font-size: 1em;
+
+            background-color: fade(@darkGray, 75%);
+            border-radius: 2em;
 
             a {
                 opacity: 1;
-                padding: 0 .6em;
+                padding: 0 .4em;
             }
         }
 
@@ -101,6 +131,38 @@
     }
 
     body {
+        #steam-banner {
+            display: flex;
+            align-items: center;
+
+            right: auto;
+            top: auto;
+            left: 0;
+            bottom: 0;
+
+            height: 1.75em;
+            width: auto;
+
+            border-bottom-left-radius: 0;
+            border-top-right-radius: 1em;
+            border-bottom: 0;
+            border-left: 0;
+            border-top: 2px solid hotpink;
+            border-right: 2px solid hotpink;
+
+            background-color: fade(desaturate(darken(hotpink, 40%), 50%), 90%);
+
+            padding: .1em .75em;
+            line-height: 1.5em;
+
+            img {
+                display: inline-block;
+                height: 85%;
+                width: auto;
+                padding: 0 .7em;
+            }
+        }
+
         #logo {
             width: auto;
             height: 55%;
@@ -127,7 +189,7 @@
 
         #social-links {
             top: auto;
-            bottom: .6em;
+            bottom: .15em;
             display: inline-block;
             line-height: 2.5em;
             background-color: fade(@darkGray, 75%);

@@ -3,7 +3,7 @@
 @bodyFont: "basic-sans", sans-serif;
 
 body { 
-    margin: 0 0 3em 0;
+    margin: 0 0 4em 0;
     padding: 0;
     background-color: @darkGray;
     color: white;
@@ -86,7 +86,7 @@ body {
         z-index: 3;
         position: fixed;
         right: 10px;
-        top: 10px;
+        bottom: 12px;
 
         // padding: 5px;
         // border-radius: 20px;
@@ -95,9 +95,9 @@ body {
         a {
             color: hotpink;
             opacity: .8;
-            padding: 0 .5em;
+            padding: 0 .4em;
 
-            font-size: 1.3em;
+            font-size: 1.4em;
             font-family: @bodyFont;
             font-weight: 100;
 
@@ -107,6 +107,66 @@ body {
             &:hover {
                 color: white;
                 opacity: 1;
+            }
+        }
+    }
+    #steam-banner {
+        z-index: 3;
+
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 11em;
+        border-bottom-left-radius: 1em;
+
+        border-bottom: 2px solid hotpink;
+        border-left: 2px solid hotpink;
+        background-color: fade(hotpink, 60%);
+        padding: 0.4em 0;
+
+        color: white;
+
+        font-family: @bodyFont;
+        font-style: italic;
+        font-weight: 100;
+        font-size: 1.2em;
+        text-align: center;
+
+        img {
+            display: block;
+            width: 90%;
+            filter: drop-shadow(1px 1px 1px fade(black, 80%));
+            padding: .25em 0 .1em 0;
+            margin: 0 auto;
+        }
+
+        // Shiny overlay effect
+        overflow: hidden;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 150%;
+            height: 100%;
+            background: linear-gradient(
+                115deg,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 255, 255, 0.3) 50%,
+                rgba(255, 255, 255, 0) 100%
+            );
+            transform: skewX(-55deg);
+            animation: shine 2s infinite;
+            z-index: 4; // higher than text
+            pointer-events: none;
+        }
+
+        @keyframes shine {
+            0% {
+                left: -150%;
+            }
+            100% {
+                left: 120%;
             }
         }
     }

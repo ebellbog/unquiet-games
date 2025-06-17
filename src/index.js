@@ -14,6 +14,7 @@ import '../img/uqg_logo_path.png';
 import '../img/uqg_elana.png';
 import '../img/uqg_nat.png';
 import '../img/banner_together.jpg';
+import '../img/bt_logo_horizontal.png';
 
 import CaretDown from '../img/caret_down.svg';
 
